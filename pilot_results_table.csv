@@ -1,0 +1,101 @@
+idx,data_source,text_snippet,entropy,structural_density,quadrant
+1,synthetic_fallback,Patients receiving Atorvastatin who are concurrently prescribed Clarithromycin exhibit variable phar,5.0,0.0,Q4
+2,synthetic_fallback,Co-administration of Metformin and Cimetidine results in a clinically significant interaction mediat,4.8182,1.3333,Q1
+3,synthetic_fallback,Co-administration of Clozapine and Fluvoxamine results in a clinically significant interaction media,4.8182,1.3333,Q1
+4,synthetic_fallback,"Lithium is a potent inhibitor of renal clearance, therefore substantially increasing systemic exposu",4.6604,2.3333,Q2
+5,synthetic_fallback,"Phenytoin inhibits CYP2C9 via competitive binding, which therefore increases plasma concentrations o",4.8286,4.0,Q1
+6,synthetic_fallback,"Tacrolimus inhibits CYP3A4 via competitive binding, which therefore increases plasma concentrations ",4.8286,4.0,Q1
+7,synthetic_fallback,Co-administration of Metformin and Cimetidine results in a clinically significant interaction mediat,4.8182,1.3333,Q1
+8,synthetic_fallback,"Tacrolimus inhibits CYP3A4 via competitive binding, which therefore increases plasma concentrations ",4.8286,4.0,Q1
+9,synthetic_fallback,"Quinidine inhibits P-glycoprotein via competitive binding, which therefore increases plasma concentr",4.8286,4.0,Q1
+10,synthetic_fallback,The combination of Haloperidol and Carbamazepine has been evaluated in multiple randomised controlle,4.8065,0.0,Q3
+11,synthetic_fallback,The combination of Carbamazepine and Erythromycin has been evaluated in multiple randomised controll,4.8065,0.0,Q3
+12,synthetic_fallback,"Tacrolimus inhibits CYP3A4 via competitive binding, which therefore increases plasma concentrations ",4.8286,4.0,Q1
+13,synthetic_fallback,"Quinidine inhibits P-glycoprotein via competitive binding, which therefore increases plasma concentr",4.8286,4.0,Q1
+14,synthetic_fallback,Co-administration of Rifampin and Oral contraceptives results in a clinically significant interactio,4.7429,1.3333,Q2
+15,synthetic_fallback,Patients receiving Simvastatin who are concurrently prescribed Gemfibrozil exhibit variable pharmaco,5.0,0.0,Q4
+16,synthetic_fallback,"Phenytoin inhibits CYP2C9 via competitive binding, which therefore increases plasma concentrations o",4.8286,4.0,Q1
+17,synthetic_fallback,The combination of Sildenafil and Nitrates has been evaluated in multiple randomised controlled tria,4.8065,0.0,Q3
+18,synthetic_fallback,Patients receiving Simvastatin who are concurrently prescribed Gemfibrozil exhibit variable pharmaco,5.0,0.0,Q4
+19,synthetic_fallback,Co-administration of Rifampin and Oral contraceptives results in a clinically significant interactio,4.7429,1.3333,Q2
+20,synthetic_fallback,Patients receiving Ketoconazole who are concurrently prescribed Midazolam exhibit variable pharmacok,5.0,0.0,Q4
+21,synthetic_fallback,"Tacrolimus inhibits CYP3A4 via competitive binding, which therefore increases plasma concentrations ",4.8286,4.0,Q1
+22,synthetic_fallback,Co-administration of Metformin and Cimetidine results in a clinically significant interaction mediat,4.8182,1.3333,Q1
+23,synthetic_fallback,Patients receiving Simvastatin who are concurrently prescribed Gemfibrozil exhibit variable pharmaco,5.0,0.0,Q4
+24,synthetic_fallback,Co-administration of Rifampin and Oral contraceptives results in a clinically significant interactio,4.7429,1.3333,Q2
+25,synthetic_fallback,"Warfarin inhibits CYP2C9 via competitive binding, which therefore increases plasma concentrations of",4.8286,4.0,Q1
+26,synthetic_fallback,"Lithium is a potent inhibitor of renal clearance, therefore substantially increasing systemic exposu",4.6604,2.3333,Q2
+27,synthetic_fallback,The combination of Digoxin and Amiodarone has been evaluated in multiple randomised controlled trial,4.8065,0.0,Q3
+28,synthetic_fallback,Co-administration of Metoprolol and Verapamil results in a clinically significant interaction mediat,4.8182,1.3333,Q1
+29,synthetic_fallback,Patients receiving Fluoxetine who are concurrently prescribed Tramadol exhibit variable pharmacokine,5.0,0.0,Q4
+30,synthetic_fallback,The combination of Carbamazepine and Erythromycin has been evaluated in multiple randomised controll,4.8065,0.0,Q3
+31,synthetic_fallback,The combination of Sildenafil and Nitrates has been evaluated in multiple randomised controlled tria,4.8065,0.0,Q3
+32,synthetic_fallback,Patients receiving Fluoxetine who are concurrently prescribed Tramadol exhibit variable pharmacokine,5.0,0.0,Q4
+33,synthetic_fallback,"Clopidogrel is a potent inhibitor of CYP2C19, therefore substantially increasing systemic exposure t",4.6538,2.3333,Q2
+34,synthetic_fallback,The combination of Digoxin and Amiodarone has been evaluated in multiple randomised controlled trial,4.8065,0.0,Q3
+35,synthetic_fallback,"Methotrexate is a potent inhibitor of OAT1/3, therefore substantially increasing systemic exposure t",4.6538,2.3333,Q2
+36,synthetic_fallback,"Ciprofloxacin is a potent inhibitor of CYP1A2, therefore substantially increasing systemic exposure ",4.6538,2.3333,Q2
+37,synthetic_fallback,The combination of Haloperidol and Carbamazepine has been evaluated in multiple randomised controlle,4.8065,0.0,Q3
+38,synthetic_fallback,Patients receiving Simvastatin who are concurrently prescribed Gemfibrozil exhibit variable pharmaco,5.0,0.0,Q4
+39,synthetic_fallback,"Phenytoin inhibits CYP2C9 via competitive binding, which therefore increases plasma concentrations o",4.8286,4.0,Q1
+40,synthetic_fallback,Patients receiving Simvastatin who are concurrently prescribed Gemfibrozil exhibit variable pharmaco,5.0,0.0,Q4
+41,synthetic_fallback,Co-administration of Rifampin and Oral contraceptives results in a clinically significant interactio,4.7429,1.3333,Q2
+42,synthetic_fallback,The combination of Digoxin and Amiodarone has been evaluated in multiple randomised controlled trial,4.8065,0.0,Q3
+43,synthetic_fallback,"Clopidogrel is a potent inhibitor of CYP2C19, therefore substantially increasing systemic exposure t",4.6538,2.3333,Q2
+44,synthetic_fallback,"Warfarin inhibits CYP2C9 via competitive binding, which therefore increases plasma concentrations of",4.8286,4.0,Q1
+45,synthetic_fallback,The combination of Haloperidol and Carbamazepine has been evaluated in multiple randomised controlle,4.8065,0.0,Q3
+46,synthetic_fallback,Co-administration of Metoprolol and Verapamil results in a clinically significant interaction mediat,4.8182,1.3333,Q1
+47,synthetic_fallback,Co-administration of Metformin and Cimetidine results in a clinically significant interaction mediat,4.8182,1.3333,Q1
+48,synthetic_fallback,"Warfarin inhibits CYP2C9 via competitive binding, which therefore increases plasma concentrations of",4.8286,4.0,Q1
+49,synthetic_fallback,Patients receiving Fluoxetine who are concurrently prescribed Tramadol exhibit variable pharmacokine,5.0,0.0,Q4
+50,synthetic_fallback,"Methotrexate is a potent inhibitor of OAT1/3, therefore substantially increasing systemic exposure t",4.6538,2.3333,Q2
+51,synthetic_fallback,"Clopidogrel is a potent inhibitor of CYP2C19, therefore substantially increasing systemic exposure t",4.6538,2.3333,Q2
+52,synthetic_fallback,Co-administration of Metoprolol and Verapamil results in a clinically significant interaction mediat,4.8182,1.3333,Q1
+53,synthetic_fallback,Patients receiving Atorvastatin who are concurrently prescribed Clarithromycin exhibit variable phar,5.0,0.0,Q4
+54,synthetic_fallback,Co-administration of Clozapine and Fluvoxamine results in a clinically significant interaction media,4.8182,1.3333,Q1
+55,synthetic_fallback,Co-administration of Rifampin and Oral contraceptives results in a clinically significant interactio,4.7429,1.3333,Q2
+56,synthetic_fallback,The combination of Haloperidol and Carbamazepine has been evaluated in multiple randomised controlle,4.8065,0.0,Q3
+57,synthetic_fallback,The combination of Haloperidol and Carbamazepine has been evaluated in multiple randomised controlle,4.8065,0.0,Q3
+58,synthetic_fallback,The combination of Sildenafil and Nitrates has been evaluated in multiple randomised controlled tria,4.8065,0.0,Q3
+59,synthetic_fallback,Patients receiving Atorvastatin who are concurrently prescribed Clarithromycin exhibit variable phar,5.0,0.0,Q4
+60,synthetic_fallback,Patients receiving Atorvastatin who are concurrently prescribed Clarithromycin exhibit variable phar,5.0,0.0,Q4
+61,synthetic_fallback,"Ciprofloxacin is a potent inhibitor of CYP1A2, therefore substantially increasing systemic exposure ",4.6538,2.3333,Q2
+62,synthetic_fallback,"Phenytoin inhibits CYP2C9 via competitive binding, which therefore increases plasma concentrations o",4.8286,4.0,Q1
+63,synthetic_fallback,Co-administration of Metoprolol and Verapamil results in a clinically significant interaction mediat,4.8182,1.3333,Q1
+64,synthetic_fallback,Patients receiving Fluoxetine who are concurrently prescribed Tramadol exhibit variable pharmacokine,5.0,0.0,Q4
+65,synthetic_fallback,Patients receiving Atorvastatin who are concurrently prescribed Clarithromycin exhibit variable phar,5.0,0.0,Q4
+66,synthetic_fallback,"Clopidogrel is a potent inhibitor of CYP2C19, therefore substantially increasing systemic exposure t",4.6538,2.3333,Q2
+67,synthetic_fallback,"Clopidogrel is a potent inhibitor of CYP2C19, therefore substantially increasing systemic exposure t",4.6538,2.3333,Q2
+68,synthetic_fallback,The combination of Digoxin and Amiodarone has been evaluated in multiple randomised controlled trial,4.8065,0.0,Q3
+69,synthetic_fallback,"Tacrolimus inhibits CYP3A4 via competitive binding, which therefore increases plasma concentrations ",4.8286,4.0,Q1
+70,synthetic_fallback,"Warfarin inhibits CYP2C9 via competitive binding, which therefore increases plasma concentrations of",4.8286,4.0,Q1
+71,synthetic_fallback,"Warfarin inhibits CYP2C9 via competitive binding, which therefore increases plasma concentrations of",4.8286,4.0,Q1
+72,synthetic_fallback,"Quinidine inhibits P-glycoprotein via competitive binding, which therefore increases plasma concentr",4.8286,4.0,Q1
+73,synthetic_fallback,Patients receiving Ketoconazole who are concurrently prescribed Midazolam exhibit variable pharmacok,5.0,0.0,Q4
+74,synthetic_fallback,The combination of Carbamazepine and Erythromycin has been evaluated in multiple randomised controll,4.8065,0.0,Q3
+75,synthetic_fallback,The combination of Carbamazepine and Erythromycin has been evaluated in multiple randomised controll,4.8065,0.0,Q3
+76,synthetic_fallback,"Lithium is a potent inhibitor of renal clearance, therefore substantially increasing systemic exposu",4.6604,2.3333,Q2
+77,synthetic_fallback,"Phenytoin inhibits CYP2C9 via competitive binding, which therefore increases plasma concentrations o",4.8286,4.0,Q1
+78,synthetic_fallback,Co-administration of Clozapine and Fluvoxamine results in a clinically significant interaction media,4.8182,1.3333,Q1
+79,synthetic_fallback,"Ciprofloxacin is a potent inhibitor of CYP1A2, therefore substantially increasing systemic exposure ",4.6538,2.3333,Q2
+80,synthetic_fallback,Patients receiving Ketoconazole who are concurrently prescribed Midazolam exhibit variable pharmacok,5.0,0.0,Q4
+81,synthetic_fallback,"Ciprofloxacin is a potent inhibitor of CYP1A2, therefore substantially increasing systemic exposure ",4.6538,2.3333,Q2
+82,synthetic_fallback,"Lithium is a potent inhibitor of renal clearance, therefore substantially increasing systemic exposu",4.6604,2.3333,Q2
+83,synthetic_fallback,Patients receiving Fluoxetine who are concurrently prescribed Tramadol exhibit variable pharmacokine,5.0,0.0,Q4
+84,synthetic_fallback,The combination of Sildenafil and Nitrates has been evaluated in multiple randomised controlled tria,4.8065,0.0,Q3
+85,synthetic_fallback,Patients receiving Ketoconazole who are concurrently prescribed Midazolam exhibit variable pharmacok,5.0,0.0,Q4
+86,synthetic_fallback,"Ciprofloxacin is a potent inhibitor of CYP1A2, therefore substantially increasing systemic exposure ",4.6538,2.3333,Q2
+87,synthetic_fallback,"Methotrexate is a potent inhibitor of OAT1/3, therefore substantially increasing systemic exposure t",4.6538,2.3333,Q2
+88,synthetic_fallback,"Quinidine inhibits P-glycoprotein via competitive binding, which therefore increases plasma concentr",4.8286,4.0,Q1
+89,synthetic_fallback,Co-administration of Clozapine and Fluvoxamine results in a clinically significant interaction media,4.8182,1.3333,Q1
+90,synthetic_fallback,"Lithium is a potent inhibitor of renal clearance, therefore substantially increasing systemic exposu",4.6604,2.3333,Q2
+91,synthetic_fallback,Co-administration of Metoprolol and Verapamil results in a clinically significant interaction mediat,4.8182,1.3333,Q1
+92,synthetic_fallback,The combination of Carbamazepine and Erythromycin has been evaluated in multiple randomised controll,4.8065,0.0,Q3
+93,synthetic_fallback,Patients receiving Ketoconazole who are concurrently prescribed Midazolam exhibit variable pharmacok,5.0,0.0,Q4
+94,synthetic_fallback,The combination of Sildenafil and Nitrates has been evaluated in multiple randomised controlled tria,4.8065,0.0,Q3
+95,synthetic_fallback,Co-administration of Clozapine and Fluvoxamine results in a clinically significant interaction media,4.8182,1.3333,Q1
+96,synthetic_fallback,"Quinidine inhibits P-glycoprotein via competitive binding, which therefore increases plasma concentr",4.8286,4.0,Q1
+97,synthetic_fallback,"Methotrexate is a potent inhibitor of OAT1/3, therefore substantially increasing systemic exposure t",4.6538,2.3333,Q2
+98,synthetic_fallback,The combination of Digoxin and Amiodarone has been evaluated in multiple randomised controlled trial,4.8065,0.0,Q3
+99,synthetic_fallback,"Methotrexate is a potent inhibitor of OAT1/3, therefore substantially increasing systemic exposure t",4.6538,2.3333,Q2
+100,synthetic_fallback,Co-administration of Metformin and Cimetidine results in a clinically significant interaction mediat,4.8182,1.3333,Q1

@@ -21,6 +21,7 @@ MODEL_ID = "TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T"
 MAX_TOKENS = 512
 EPS = 1e-9
 PLOT_PATH = "entropy_vs_density_pilot.png"
+TABLE_PATH = "pilot_results_table.csv"
 
 STRUCTURAL_KEYWORDS = [
     "due to",           # multi-word first so \b alts are unambiguous
@@ -86,7 +87,6 @@ def fetch_ddi_corpus(n: int = 100) -> Optional[list]:
                     "bigbio/ddi_corpus",
                     config,
                     split=split,
-                    trust_remote_code=True,
                 )
                 texts = _extract_texts_from_ddi(ds, config)
                 if len(texts) >= 20:
@@ -220,15 +220,17 @@ def generate_synthetic(n: int = 100) -> list:
     return texts
 
 
-def load_data(n: int = 100) -> list:
+def load_data(n: int = 100) -> tuple:
+    """Returns (texts: list[str], source_label: str)."""
     print("\n[data] === Data ingestion ===")
     texts = fetch_ddi_corpus(n)
     if texts:
-        return texts
+        return texts, "bigbio/ddi_corpus"
     print("[data] All HuggingFace attempts failed — using synthetic DDI dataset")
     synth = generate_synthetic(n)
     print(f"[data] Generated {len(synth)} synthetic DDI examples")
-    return synth
+    print("[data] WARNING: results below are from SYNTHETIC data, not real DDI corpus.")
+    return synth, "synthetic_fallback"
 
 
 # ---------------------------------------------------------------------------
@@ -426,13 +428,70 @@ def make_scatter_plot(entropies: list, densities: list, results: dict) -> None:
 
 
 # ---------------------------------------------------------------------------
-# Step 7: Console output
+# Step 7a: Per-example table (CSV + console preview)
 # ---------------------------------------------------------------------------
 
-def print_results(results: dict) -> None:
+def save_results_table(
+    texts: list,
+    entropies: list,
+    densities: list,
+    results: dict,
+    data_source: str,
+) -> None:
+    import csv
+
+    med_e = results["median_entropy"]
+    med_d = results["median_density"]
+
+    def quadrant(e, d):
+        if e >= med_e and d >= med_d:
+            return "Q1"
+        elif e < med_e and d >= med_d:
+            return "Q2"
+        elif e < med_e and d < med_d:
+            return "Q3"
+        return "Q4"
+
+    rows = []
+    for i, (text, e, d) in enumerate(zip(texts, entropies, densities)):
+        rows.append({
+            "idx": i + 1,
+            "data_source": data_source,
+            "text_snippet": text[:100].replace("\n", " "),
+            "entropy": round(e, 4),
+            "structural_density": round(d, 4),
+            "quadrant": quadrant(e, d),
+        })
+
+    with open(TABLE_PATH, "w", newline="") as f:
+        writer = csv.DictWriter(
+            f, fieldnames=["idx", "data_source", "text_snippet",
+                           "entropy", "structural_density", "quadrant"]
+        )
+        writer.writeheader()
+        writer.writerows(rows)
+
+    print(f"[table] saved → {TABLE_PATH}  ({len(rows)} rows)")
+
+    # Console preview: top 10 rows sorted by entropy descending
+    print(f"\n{'idx':>4}  {'entropy':>8}  {'density':>8}  {'Q':>2}  text snippet")
+    print("-" * 75)
+    for r in sorted(rows, key=lambda x: x["entropy"], reverse=True)[:10]:
+        print(f"{r['idx']:>4}  {r['entropy']:>8.4f}  {r['structural_density']:>8.4f}"
+              f"  {r['quadrant']:>2}  {r['text_snippet'][:48]}…")
+    print(f"  … (full {len(rows)}-row table in {TABLE_PATH})")
+
+
+# ---------------------------------------------------------------------------
+# Step 7b: Aggregate console output
+# ---------------------------------------------------------------------------
+
+def print_results(results: dict, data_source: str = "") -> None:
     sep = "=" * 58
     print(f"\n{sep}")
     print("  PILOT RESULTS: Entropy vs Structural Density (DDI)")
+    if data_source:
+        print(f"  Data source: {data_source}")
     print(sep)
     print(f"  Pearson  r   = {results['pearson_r']:.4f}  "
           f"(p = {results['pearson_p']:.3g})")
@@ -459,7 +518,7 @@ def print_results(results: dict) -> None:
 
 def main():
     # 1. Data
-    texts = load_data(n=100)
+    raw_texts, data_source = load_data(n=100)
 
     # 2. Infrastructure
     sent_split = setup_sent_splitter()
@@ -468,12 +527,13 @@ def main():
 
     # 3. Metric computation
     from tqdm import tqdm
-    entropies, densities = [], []
+    texts, entropies, densities = [], [], []
 
-    print(f"\n[metrics] Computing entropy + structural density for {len(texts)} examples …")
-    for text in tqdm(texts, desc="examples", unit="ex"):
+    print(f"\n[metrics] Computing entropy + structural density for {len(raw_texts)} examples …")
+    for text in tqdm(raw_texts, desc="examples", unit="ex"):
         if not isinstance(text, str) or not text.strip():
             continue
+        texts.append(text)
         entropies.append(compute_entropy(text, model, tokenizer, device))
         densities.append(compute_structural_density(text, sent_split))
 
@@ -483,7 +543,8 @@ def main():
     # 4. Analysis + output
     results = run_analysis(entropies, densities)
     make_scatter_plot(entropies, densities, results)
-    print_results(results)
+    save_results_table(texts, entropies, densities, results, data_source)
+    print_results(results, data_source)
 
 
 if __name__ == "__main__":
